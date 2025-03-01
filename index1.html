@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Cafe Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cyber Cafe Manager</a>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Add Computer</h5>
+                        <form id="computerForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="computerName" placeholder="Computer Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="model" placeholder="Model" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="processor" placeholder="Processor" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="ram" placeholder="RAM" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="storage" placeholder="Storage" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="os" placeholder="Operating System" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Computer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Computer Name</th>
+                            <th>Model</th>
+                            <th>Processor</th>
+                            <th>RAM</th>
+                            <th>Storage</th>
+                            <th>OS</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="computerList">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
